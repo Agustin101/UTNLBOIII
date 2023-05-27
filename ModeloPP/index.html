@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+        <script type="module" src="app.js"></script>
+    </head>
+    <body>
+        <section class="abm-section">
+            <h2>Llena el formulario de Alta</h2>
+            <form class="formulario-alta">
+                <fieldset>
+                    <legend>Información Del Anuncio</legend>
+                    <div class="form-input">
+                        <label for="titulo"> Titulo:</label>
+                        <input type="text" placeholder="Título" id="titulo" />
+                    </div>
+                    <fieldset>
+                        <legend class="legend-transaccion">Transaccion:</legend>
+
+                        <div class="form-input">
+                            <label for="venta"> Venta</label>
+                            <input
+                                type="radio"
+                                value="venta"
+                                name="transaccion"
+                                checked
+                            />
+                        </div>
+                        <div class="form-input">
+                            <label for="alquiler"> Alquiler</label>
+                            <input
+                                type="radio"
+                                value="alquiler"
+                                name="transaccion"
+                            />
+                        </div>
+                    </fieldset>
+                    <div class="form-input">
+                        <label for="descripcion"> Descripcion:</label>
+                        <input
+                            type="text"
+                            placeholder="Descripcion"
+                            id="descripcion"
+                        />
+                    </div>
+                    <div class="form-input">
+                        <label for="precio"> Precio:</label>
+                        <input type="text" placeholder="Precio" id="precio" />
+                    </div>
+                    <div class="form-input">
+                        <label for="banios"> Cantidad de baños:</label>
+                        <input type="text" placeholder="Baños" id="banios" />
+                    </div>
+                    <div class="form-input">
+                        <label for="autos"> Cantidad de autos:</label>
+                        <input type="text" placeholder="Autos" id="autos" />
+                    </div>
+                    <div class="form-input">
+                        <label for="dormitorios">
+                            Cantidad de dormitorios:</label
+                        >
+                        <input
+                            type="text"
+                            placeholder="Dormitorios"
+                            id="dormitorios"
+                        />
+                    </div>
+                    <input type="text" hidden value="" />
+                </fieldset>
+                <input type="submit" value="Guardar" class="btn-guardar" />
+                <input
+                    type="button"
+                    value="eliminar"
+                    class="btn-guardar btn-eliminar oculto"
+                    id="btnEliminar"
+                />
+                <input
+                    type="button"
+                    value="Cancelar"
+                    class="btn-guardar btn-cancelar oculto"
+                    id="btnCancelar"
+                />
+                <input type="hidden" name="anuncioId" />
+            </form>
+        </section>
+        <div class="spinner" id="spinner-container"></div>
+        <section class="anuncios-section oculto"></section>
+    </body>
+</html>
